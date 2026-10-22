@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poster Pengujian Kekerasan Material A3</title>
+
+<style>
+@page {
+    size: A3 portrait;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 297mm;
+    height: 420mm;
+    font-family: Arial, sans-serif;
+    color: #1a1a1a;
+}
+
+body {
+    background: #eeeeee;
+}
+
+.poster-container {
+    width: 297mm;
+    height: 420mm;
+    padding: 10mm;
+    border: 3mm solid #0f2042;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 1.5mm double #0f2042;
+    padding-bottom: 5mm;
+    margin-bottom: 6mm;
+}
+
+.header h1 {
+    font-size: 25pt;
+    line-height: 1.15;
+    color: #0f2042;
+    text-transform: uppercase;
+    margin-bottom: 3mm;
+}
+
+.header h2 {
+    font-size: 12pt;
+    color: #555;
+    font-weight: normal;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5mm;
+    flex: 1;
+    min-height: 0;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.card {
+    border: 0.6mm solid #0f2042;
+    border-radius: 1mm;
+    padding: 5mm;
+    background: white;
+    min-width: 0;
+}
+
+.card-title {
+    font-size: 13pt;
+    font-weight: bold;
+    color: white;
+    background: #0f2042;
+    margin: -5mm -5mm 4mm;
+    padding: 3mm 5mm;
+    text-transform: uppercase;
+}
+
+.card p {
+    font-size: 10pt;
+    line-height: 1.4;
+    margin-bottom: 2.5mm;
+    text-align: justify;
+}
+
+.card ul {
+    margin-left: 5mm;
+    font-size: 9.5pt;
+    line-height: 1.35;
+}
+
+.card li {
+    margin-bottom: 2mm;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #0f2042;
+}
+
+.footer {
+    text-align: center;
+    font-size: 8pt;
+    color: #666;
+    border-top: 0.3mm solid #ddd;
+    padding-top: 3mm;
+    margin-top: 5mm;
+    flex-shrink: 0;
+}
+
+@media screen {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .poster-container {
+        flex-shrink: 0;
+        box-shadow: 0 4px 20px #0002;
+    }
+}
+
+@media print {
+    html, body {
+        width: 297mm;
+        height: 420mm;
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
+    .poster-container {
+        width: 297mm;
+        height: 420mm;
+        border: 3mm solid #0f2042;
+        box-shadow: none;
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="poster-container">
+
+    <header class="header">
+        <h1>Pengujian Kekerasan Material Teknik</h1>
+        <h2>
+            Laboratorium Metalurgi Fisik
+            &bull; Institut Teknologi Nasional Bandung
+        </h2>
+    </header>
+
+    <main class="grid-layout">
+
+        <section class="card full-width">
+            <div class="card-title">Definisi Utama Kekerasan</div>
+            <p>
+                Kekerasan (<span class="highlight">Hardness</span>)
+                merupakan sifat mekanik material teknik yang menyatakan
+                ketahanan bahan terhadap
+                <span class="highlight">deformasi plastis</span>.
+                Deformasi plastis adalah perubahan bentuk permanen pada
+                permukaan benda akibat gaya penetrasi, penekanan,
+                atau goresan dari luar.
+            </p>
+        </section>
+
+        <section class="card">
+            <div class="card-title">3 Metode Pengukuran Utama</div>
+            <ul>
+                <li>
+                    <span class="highlight">Metode Goresan:</span>
+                    Menentukan kekerasan secara kualitatif berdasarkan
+                    kemampuan material menggores material lain,
+                    menggunakan acuan Skala Mohs.
+                </li>
+                <li>
+                    <span class="highlight">Metode Dinamik:</span>
+                    Menentukan kekerasan berdasarkan respons pantulan
+                    benda penekan yang dijatuhkan pada material.
+                </li>
+                <li>
+                    <span class="highlight">Metode Penekanan:</span>
+                    Mengukur kekerasan dengan menekan spesimen
+                    menggunakan indentor dan beban tertentu.
+                </li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <div class="card-title">Faktor Struktur Mikro Logam</div>
+            <ul>
+                <li>
+                    <span class="highlight">Sistem Slip Kristal:</span>
+                    Keterbatasan sistem slip dapat meningkatkan
+                    ketahanan logam terhadap deformasi.
+                </li>
+                <li>
+                    <span class="highlight">Hambatan Dislokasi:</span>
+                    Batas butir dan penghalang mikrostruktur
+                    menghambat pergerakan dislokasi.
+                </li>
+                <li>
+                    <span class="highlight">Pengerjaan Dingin:</span>
+                    Meningkatkan kerapatan dislokasi sehingga
+                    dapat menyebabkan pengerasan regangan.
+                </li>
+            </ul>
+        </section>
+
+        <section class="card full-width">
+            <div class="card-title">Metode Uji Penekanan Laboratorium</div>
+            <p>
+                <strong>• Metode Brinell:</strong>
+                Menggunakan indentor berbentuk bola baja yang diperkeras
+                atau tungsten karbida. Jejak yang relatif besar cocok
+                untuk mengukur kekerasan rata-rata material heterogen,
+                seperti besi cor.
+            </p>
+            <p>
+                <strong>• Metode Vickers:</strong>
+                Menggunakan indentor intan berbentuk piramida beralas
+                persegi. Metode ini dapat digunakan pada beragam material
+                dan rentang beban pengujian.
+            </p>
+            <p>
+                <strong>• Metode Rockwell:</strong>
+                Menentukan kekerasan berdasarkan kedalaman penetrasi
+                setelah pemberian beban awal dan beban utama.
+                Pengujiannya relatif cepat dan praktis untuk industri.
+            </p>
+        </section>
+
+        <section class="card full-width">
+            <div class="card-title">Fenomena pada Pengujian Tekan</div>
+            <p>
+                <span class="highlight">Sinking:</span>
+                Kondisi ketika permukaan material di sekitar indentasi
+                turun mengikuti bentuk penetrasi. Fenomena ini dapat
+                memengaruhi ketepatan pengukuran kekerasan.
+            </p>
+            <p>
+                <span class="highlight">Ridging:</span>
+                Kondisi ketika material di sekitar bekas penekanan
+                membentuk tonjolan. Fenomena ini dapat memengaruhi
+                bentuk jejak indentasi dan hasil pengukuran.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        Modul Praktikum MSB-209
+        &bull; Standar Operasional Prosedur Metalurgi
+        &bull; Dokumen Akademik
+    </footer>
+
+</div>
+</body>
+</html>
